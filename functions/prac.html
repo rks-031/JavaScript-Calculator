@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Practice Functions</title>
+  </head>
+  <body>
+    <script>
+      let num = 10;
+      console.log(checkNum(num));
+
+      function checkNum(num) {
+        if (num % 2 === 0) {
+          return "even";
+        } else return "odd";
+      }
+
+      let a = 3,
+        b = 5;
+
+      console.log(`The larger of ${a} and ${b} is ${giveLarger(a, b)}`);
+
+      function giveLarger(a, b) {
+        return a > b ? a : b;
+      }
+
+      let c = 25;
+      console.log(`${c} degree celcius equals ${calFahren(c)}`);
+
+      function calFahren(c) {
+        return (9 / 5) * c + 32;
+      }
+    </script>
+  </body>
+</html>
