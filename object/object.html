@@ -41,7 +41,7 @@
       let q = { pop: "vgh" };
       console.log(p === q);*/
 
-      let product = {
+      /*let product = {
         company: "Mango",
         price: 861,
         item_name: "T-shirt",
@@ -51,7 +51,66 @@
 
       let { company, price } = product;
       console.log(company);
-      console.log(price);
+      console.log(price);*/
+
+      let product = {
+        brand: "Myntra",
+        price: "1234.56",
+        item_name: "Pant",
+        delivery_time: "4:45",
+      };
+
+      let prod = product;
+      console.log(
+        `product = ${product.item_name} and prod = ${prod.item_name}`
+      );
+
+      prod.item_name = "Shirt";
+      console.log(
+        `product = ${product.item_name} and prod = ${prod.item_name}`
+      );
+
+      let { delivery_time } = product;
+      console.log(delivery_time);
+
+      let obj = {
+        message: "good job",
+        status: "complete",
+      };
+
+      let msg = obj.message;
+      console.log(msg);
+
+      let { message } = obj;
+      console.log(message);
+
+      function isIdenticalProduct(product1, product2) {
+        if (typeof produc1 !== "object" || typeof product2 !== "object") {
+          console.warn("Product is not an object");
+          return false;
+        }
+
+        if (
+          product1.brand === prodcut2.brand &&
+          product1.price === produc2.price &&
+          product1.item_name === product2.item_name
+        ) {
+          return ture;
+        } else {
+          return false;
+        }
+      }
+
+      let product2 = {
+        brand: "Myntra",
+        price: "1234.56",
+        item_name: "Pant",
+        delivery_time: "4:45",
+      };
+
+      console.log(isIdenticalProduct(product, ""));
+      console.log(isIdenticalProduct(product, product2));
+      console.log(isIdenticalProduct(product2, product2));
     </script>
   </body>
 </html>
