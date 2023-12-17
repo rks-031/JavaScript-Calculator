@@ -41,18 +41,29 @@
     </button>
 
     <br />
-    <button onclick="localStorage.clear()">Reset</button>
+    <button
+      onclick="localStorage.clear()
+      resetScore();"
+    >
+      Reset
+    </button>
 
     <script>
       let scoreStr = localStorage.getItem("Score");
-      let score = JSON.parse(scoreStr) || {
-        win: 0,
-        lost: 0,
-        tie: 0,
-      };
-      score.displayScore = function () {
-        return `Number of losses: ${score.lost}, Number of Wins: ${score.win} and Number of ties: ${score.tie}`;
-      };
+      let score;
+      resetScore(scoreStr);
+      function resetScore(scoreStr) {
+        score = scoreStr
+          ? JSON.parse(scoreStr)
+          : {
+              win: 0,
+              lost: 0,
+              tie: 0,
+            };
+        score.displayScore = function () {
+          return `Number of losses: ${score.lost}, Number of Wins: ${score.win} and Number of ties: ${score.tie}`;
+        };
+      }
       function generateComputerChoice() {
         //This will generate random number between 0 and 3
         let randomNumber = Math.random() * 3;
