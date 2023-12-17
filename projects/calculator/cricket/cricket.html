@@ -40,6 +40,9 @@
       Stump
     </button>
 
+    <br />
+    <button onclick="localStorage.clear()">Reset</button>
+
     <script>
       let scoreStr = localStorage.getItem("Score");
       let score = JSON.parse(scoreStr) || {
