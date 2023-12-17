@@ -7,17 +7,51 @@
   </head>
   <body>
     <script>
+      /*let product = {
+        company: "Mango",
+        price: 861,
+        item_name: "T-shirt",
+        displayrice: function () {
+          console.log(`Price of the product is ₹${this.price}`);
+        },
+      };
+
+      product.displayrice();*/
+
+      //console.log(product);
+      //product.company = "Banana";
+      //console.log(product.company);
+      //console.log(product["company"]);
+      //delete product.company;
+      //console.log(product);
+
+      //autoboxing
+      //console.log("This is KG Coding".toUpperCase());
+      //console.log("This is KG Coding".length);
+      //console.log("This is KG Coding KG class".//replace("KG", "Knowedge Gate"));
+
+      //object reference
+      /*let x = { num: 5 };
+      let y = x;
+      console.log(`x=${x.num}, y=${y.num}`);
+      x.num = 8;
+      console.log(`x=${x.num}, y=${y.num}`);
+
+      let p = { pop: "vgh" };
+      let q = { pop: "vgh" };
+      console.log(p === q);*/
+
       let product = {
         company: "Mango",
         price: 861,
         item_name: "T-shirt",
       };
-      console.log(product);
-      //product.company = "Banana";
-      console.log(product.company);
-      console.log(product["company"]);
-      delete product.company;
-      console.log(product);
+
+      let company1 = product.company;
+
+      let { company, price } = product;
+      console.log(company);
+      console.log(price);
     </script>
   </body>
 </html>
