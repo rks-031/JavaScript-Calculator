@@ -41,15 +41,15 @@
     </button>
 
     <script>
-      let score = {
+      let scoreStr = localStorage.getItem("Score");
+      let score = JSON.parse(scoreStr) || {
         win: 0,
         lost: 0,
         tie: 0,
-        displayScore: function () {
-          return `Number of losses: ${score.lost}, Number of Wins: ${score.win} and Number of ties: ${score.tie}`;
-        },
       };
-
+      score.displayScore = function () {
+        return `Number of losses: ${score.lost}, Number of Wins: ${score.win} and Number of ties: ${score.tie}`;
+      };
       function generateComputerChoice() {
         //This will generate random number between 0 and 3
         let randomNumber = Math.random() * 3;
@@ -100,10 +100,11 @@
       }
 
       function showResult(userMove, computerMove, result) {
+        localStorage.setItem("Score", JSON.stringify(score));
         alert(
           `You have chosen ${userMove}. Computer choice is ${computerMove}
-          
-          ${result}. 
+
+          ${result}.
 
           ${score.displayScore()}`
         );
