@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Advance Functions</title>
+  </head>
+  <body>
+    <script>
+      /*let sum = function (num1, num2) {
+        return num1 + num2;
+      };*/
+
+      /*let newsum = sum;
+
+      console.log(sum(4, 5));
+      console.log(newsum(4, 5));*/
+
+      /*let sumThreeNum = function (num1, num2, num3, sum) {
+        return num3 + sum(num1, num2);
+      };
+
+      console.log(sumThreeNum(4, 5, 7, sum));
+      console.log(sumThreeNum);
+      console.log(typeof sumThreeNum);*/
+
+      /*let sum = (num1, num2) => {
+        return num1 + num2;
+      };
+      let newsum = sum;
+      console.log(sum(4, 5));
+      console.log(newsum(4, 5));*/
+
+      let alarm = function () {
+        console.log("Subah ho gyi mamu!!");
+      };
+
+      /*console.log("Alarm set");
+      let timerID = setTimeout(alarm, 2000); //function as an argument,time
+      console.log(`Alarm set with timerID:${timerID}`);
+      clearTimeout(timerID);*/
+
+      let intervalId = setInterval(alarm, 1000);
+      setTimeout(() => clearInterval(intervalId), 5000);
+    </script>
+  </body>
+</html>

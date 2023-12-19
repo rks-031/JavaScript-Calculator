@@ -1,7 +1,4 @@
-let todoList = [
-  { item: "Buy milk", dueDate: "4/10/2023" },
-  { item: "Learn jS", dueDate: "4/10/2023" },
-];
+let todoList = [{ item: "Complete jS", dueDate: "2023-12-19" }];
 displayItems();
 
 function addTodo() {
